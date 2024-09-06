@@ -8,18 +8,18 @@ const Home = forwardRef((props, ref) => {
           <div className="text-gray-300 text-xl md:text-2xl">
             <p>HELLO THERE!</p>
           </div>
-          <div className="text-3xl md:text-7xl lg:text-5xl xl:text-7xl flex flex-col gap-4">
-            <p>I am Nipun Baryah,</p>
-            <p>a web developer</p>
+          <div className="text-2xl md:text-7xl lg:text-5xl xl:text-7xl flex flex-col gap-4">
+            <span>I am Nipun Baryah,</span>
+            <span>a web developer</span>
           </div>
           <div className=" text-gray-400 text-xl">
             <p>ENTRY LEVEL DEVELOPER</p>
           </div>
         </div>
-        <div className="w-5/6 mx-auto lg:w-1/3 h-full flex items-center justify-center border-white">
+        <div className="w-5/6 mx-auto lg:w-1/3 h-full flex items-center justify-center border border-white">
           <img
             src={profilePic}
-            className=" border border-spacing-5 w-full p-5 hover:p-0 duration-200"
+            className="w-full scale-90 hover:scale-100 duration-200"
           />
         </div>
       </div>
