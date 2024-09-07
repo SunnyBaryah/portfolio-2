@@ -37,7 +37,7 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
         showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
       } duration-300`}
     >
-      <div className="flex items-center justify-center lg:justify-between w-4/6 mx-auto">
+      <div className="flex items-center justify-between w-3/4 mx-auto">
         <div className="flex gap-1 text-2xl font-semibold">
           <div>My</div>
           <div className="text-blue-400">Portfolio</div>
@@ -52,6 +52,14 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
             Contact
           </NavButton>
         </nav>
+        <a
+          href="https://drive.google.com/file/d/17fJfDHlT_9U1eu7ch56E85v2ZN6LlwWD/view?usp=drive_link"
+          target="_blank"
+        >
+          <button className=" bg-white text-blue-400 px-2 py-1 lg:px-4 lg:py-2 hover:bg-blue-400 hover:text-white hover:scale-110 duration-300">
+            My CV
+          </button>
+        </a>
       </div>
     </div>
   );
