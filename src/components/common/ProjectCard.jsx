@@ -2,9 +2,9 @@ import pic from "/Calci.JPG?url";
 export default function ProjectCard({ project }) {
   return (
     <div className="flex flex-col items-center justify-center gap-6">
-      <div className="w-80 h-80 xl:w-96 xl:h-96 relative border-white border-2 overflow-hidden group">
+      <div className="w-60 h-60 lg:w-80 lg:h-80 xl:w-96 xl:h-96 relative border-white border-2 overflow-hidden group">
         <div className="absolute inset-0 transition-transform duration-500 transform group-hover:translate-y-80  z-20 text-black bg-white h-full w-full flex justify-center items-center">
-          <h1 className="text-2xl xl:text-4xl font-semibold">
+          <h1 className="text-center text-2xl xl:text-4xl font-semibold">
             {project.title}
           </h1>
         </div>
@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
         </a>
       </div>
       <div>
-        <p>{project.descp}</p>
+        <p className="text-center">{project.descp}</p>
       </div>
     </div>
   );

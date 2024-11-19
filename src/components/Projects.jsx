@@ -34,13 +34,13 @@ const Projects = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="w-4/6 mx-auto min-h-screen flex flex-col items-center gap-10 xl:gap-20 text-white pb-10 mt-12 xl:mt-0"
+      className="w-5/6 mx-auto min-h-screen flex flex-col items-center gap-10 xl:gap-20 text-white pb-10 mt-12 xl:mt-0"
     >
       <div className="flex flex-col items-center">
         <h2 className="text-4xl md:text-5xl lg:text-7xl pt-8 pb-4">Projects</h2>
         <p className="text-gray-400">AN OVERVIEW OF MY WORK</p>
       </div>
-      <div className="flex flex-wrap w-4/5 gap-x-20 gap-y-10 justify-center items-center">
+      <div className="flex flex-wrap gap-8 w-[90%] justify-center items-center">
         {projects.length > 0 &&
           projects.map((project) => <ProjectCard project={project} />)}
       </div>
