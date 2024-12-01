@@ -1,11 +1,17 @@
 import React, { forwardRef } from "react";
 import ProjectCard from "./common/ProjectCard";
-import calciPic from "/Calci.JPG?url";
 import passPic from "/PassGen.JPG?url";
 import currencyPic from "/Currency.JPG?url";
 import quickBitePic from "/QuickBite.JPG?url";
+import codeGeekPic from "/CodeGeek.JPG?url";
 const Projects = forwardRef((props, ref) => {
   const projects = [
+    {
+      title: "CodeGeek",
+      pic: codeGeekPic,
+      link: "https://code-geek-client.vercel.app/",
+      descp: "A coding platform inspired by LeetCode, using MERN stack",
+    },
     {
       title: "QuickBite",
       pic: quickBitePic,
@@ -23,12 +29,6 @@ const Projects = forwardRef((props, ref) => {
       pic: passPic,
       link: "https://sunnybaryah.github.io/password-generator/",
       descp: "A password generator using React JS",
-    },
-    {
-      title: "Calculator",
-      pic: calciPic,
-      link: "https://sunnybaryah.github.io/Calculator/",
-      descp: "A simple Calculator using Vanilla JavaScript",
     },
   ];
   return (
