@@ -19,7 +19,7 @@ export default function ProjectCard({ project }) {
           Link
         </a>
       </div>
-      <div>
+      <div className="w-60">
         <p className="text-center">{project.descp}</p>
       </div>
     </div>
