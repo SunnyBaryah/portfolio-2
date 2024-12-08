@@ -1,9 +1,18 @@
 import React, { forwardRef } from "react";
 import profilePic from "/profile2.jpeg";
+import { useInView } from "react-intersection-observer";
 const Home = forwardRef((props, ref) => {
+  const [ref1, inView] = useInView({
+    threshold: 0.1,
+  });
   return (
-    <div ref={ref} className="min-h-screen">
-      <div className="pt-32 xl:pt-44 w-5/6 xl:w-2/3 mx-auto flex flex-col gap-5 xl:gap-0 lg:flex-row justify-between">
+    <div ref={ref} className={`min-h-screen `}>
+      <div
+        ref={ref1}
+        className={`transition-transform transform duration-500 ${
+          inView ? "animate-popUp" : "opacity-0"
+        } pt-32 xl:pt-44 w-5/6 xl:w-2/3 mx-auto flex flex-col gap-5 xl:gap-0 lg:flex-row justify-between`}
+      >
         <div className="flex flex-col gap-5 justify-center w-5/6 mx-auto md:w-2/3  text-white p-3">
           <div className="text-gray-300 text-xl md:text-2xl">
             <p>HELLO THERE!</p>

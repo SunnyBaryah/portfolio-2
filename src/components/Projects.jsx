@@ -4,7 +4,11 @@ import passPic from "/PassGen.JPG?url";
 import currencyPic from "/Currency.JPG?url";
 import quickBitePic from "/QuickBite.JPG?url";
 import codeGeekPic from "/CodeGeek.JPG?url";
+import { useInView } from "react-intersection-observer";
 const Projects = forwardRef((props, ref) => {
+  const [ref1, inView] = useInView({
+    threshold: 0.1,
+  });
   const projects = [
     {
       title: "CodeGeek",
@@ -32,17 +36,23 @@ const Projects = forwardRef((props, ref) => {
     },
   ];
   return (
-    <div
-      ref={ref}
-      className="w-5/6 mx-auto min-h-screen flex flex-col items-center gap-10 xl:gap-20 text-white pb-10 mt-12 xl:mt-0"
-    >
-      <div className="flex flex-col items-center">
-        <h2 className="text-4xl md:text-5xl lg:text-7xl pt-8 pb-4">Projects</h2>
-        <p className="text-gray-400">AN OVERVIEW OF MY WORK</p>
-      </div>
-      <div className="flex flex-wrap gap-8 w-[90%] justify-center items-center">
-        {projects.length > 0 &&
-          projects.map((project) => <ProjectCard project={project} />)}
+    <div ref={ref} className="w-5/6 mx-auto min-h-screen ">
+      <div
+        ref={ref1}
+        className={`transition-transform transform duration-500 ${
+          inView ? "animate-popUp" : "opacity-0"
+        } flex flex-col items-center gap-10 xl:gap-20 text-white pb-10 mt-12 xl:mt-0`}
+      >
+        <div className="flex flex-col items-center">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl pt-8 pb-4">
+            Projects
+          </h2>
+          <p className="text-gray-400">AN OVERVIEW OF MY WORK</p>
+        </div>
+        <div className="flex flex-wrap gap-8 w-[90%] justify-center items-center">
+          {projects.length > 0 &&
+            projects.map((project) => <ProjectCard project={project} />)}
+        </div>
       </div>
     </div>
   );
