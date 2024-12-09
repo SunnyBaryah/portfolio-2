@@ -13,7 +13,7 @@ export default function ProjectCard({ project }) {
           src={project.pic}
         />
         <a
-          className="absolute top-[16rem] xl:top-[21rem] right-0 bg-black text-blue-400 hover:text-white duration-150 inset-auto z-30 mx-4 px-3 py-1"
+          className="absolute top-[12rem] lg:top-[17rem] xl:top-[21rem] right-0 bg-black text-blue-400 hover:text-white duration-150 inset-auto z-30 mx-4 px-3 py-1"
           href={project.link}
         >
           Link
