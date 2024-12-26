@@ -36,7 +36,7 @@ const Projects = forwardRef((props, ref) => {
     },
   ];
   return (
-    <div ref={ref} className="w-5/6 mx-auto min-h-screen ">
+    <div ref={ref} className="w-5/6 mx-auto mb-32 ">
       <div
         ref={ref1}
         className={`transition-transform transform duration-500 ${
@@ -49,7 +49,11 @@ const Projects = forwardRef((props, ref) => {
           </h2>
           <p className="text-gray-400">AN OVERVIEW OF MY WORK</p>
         </div>
-        <div className="flex flex-wrap gap-8 w-[90%] justify-center items-center">
+        <div
+          className={`transition-transform transform duration-500 ${
+            inView ? "animate-popUp" : "opacity-0"
+          } flex flex-wrap gap-8 w-[90%] justify-center items-center`}
+        >
           {projects.length > 0 &&
             projects.map((project) => <ProjectCard project={project} />)}
         </div>

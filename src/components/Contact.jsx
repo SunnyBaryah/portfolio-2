@@ -6,7 +6,7 @@ const Contact = forwardRef((props, ref) => {
     threshold: 0.1,
   });
   return (
-    <div ref={ref} className="min-h-screen w-4/6 mx-auto ">
+    <div ref={ref} className="w-4/6 mx-auto">
       <div
         ref={ref1}
         className={`transition-transform transform duration-500 ${
@@ -24,20 +24,26 @@ const Contact = forwardRef((props, ref) => {
             method="POST"
           >
             <input
-              className="w-full h-10 p-2 text-black"
+              className={`transition-transform transform duration-500 ${
+                inView ? "animate-popUp" : "opacity-0"
+              } w-full h-10 p-2 text-black`}
               placeholder="Enter your name"
               type="text"
               name="name"
             />
             <input
-              className="w-full h-10 p-2 text-black"
+              className={`transition-transform transform duration-500 ${
+                inView ? "animate-popUpLate" : "opacity-0"
+              } w-full h-10 p-2 text-black`}
               placeholder="Enter your email"
               type="email"
               name="email"
             />
 
             <textarea
-              className="w-full h-32 p-2 text-black"
+              className={`transition-transform transform duration-500 ${
+                inView ? "animate-popUpLater" : "opacity-0"
+              } w-full h-32 p-2 text-black`}
               placeholder="Enter your message"
               name="message"
             ></textarea>
@@ -52,7 +58,11 @@ const Contact = forwardRef((props, ref) => {
         </div>
         <div className="mt-10 w-full flex flex-col items-center justify-center gap-8">
           <h1 className="text-xl xl:text-4xl">Social Handles</h1>
-          <div className="flex flex-wrap">
+          <div
+            className={`transition-transform transform duration-500 ${
+              inView ? "animate-popUpLater" : "opacity-0"
+            } flex flex-wrap`}
+          >
             <SocialBtn />
           </div>
         </div>

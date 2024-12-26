@@ -6,7 +6,7 @@ const Home = forwardRef((props, ref) => {
     threshold: 0.1,
   });
   return (
-    <div ref={ref} className={`min-h-screen `}>
+    <div ref={ref} className={`mb-20`}>
       <div
         ref={ref1}
         className={`transition-transform transform duration-500 ${
@@ -18,8 +18,20 @@ const Home = forwardRef((props, ref) => {
             <p>HELLO THERE!</p>
           </div>
           <div className="text-2xl md:text-7xl lg:text-5xl xl:text-7xl flex flex-col gap-4">
-            <span>I am Nipun Baryah,</span>
-            <span>a web developer</span>
+            <span
+              className={`transition-transform transform duration-500 ${
+                inView ? "animate-popUpLate" : "opacity-0"
+              }`}
+            >
+              I am Nipun Baryah,
+            </span>
+            <span
+              className={`transition-transform transform duration-500 ${
+                inView ? "animate-popUpLater" : "opacity-0"
+              }`}
+            >
+              a web developer
+            </span>
           </div>
           <div className=" text-gray-400 text-xl">
             <p>ENTRY LEVEL DEVELOPER</p>

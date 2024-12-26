@@ -6,7 +6,7 @@ const About = forwardRef((props, ref) => {
     threshold: 0.1,
   });
   return (
-    <div ref={ref} className="min-h-screen ">
+    <div ref={ref} className="mb-32 ">
       <div
         ref={ref1}
         className={`transition-transform transform duration-500 ${
@@ -25,7 +25,11 @@ const About = forwardRef((props, ref) => {
             />
           </div>
           <div className="w-full xl:w-3/4 lg:text-xl flex items-center">
-            <p className="leading-relaxed">
+            <p
+              className={`leading-relaxed transition-transform transform duration-1000 ${
+                inView ? "animate-popUpLate" : "opacity-0"
+              }`}
+            >
               I am a dedicated web developer with over a year of hands-on
               experience, including mastering data structures and algorithms
               (DSA) and developing full-stack projects using the MERN stack. My

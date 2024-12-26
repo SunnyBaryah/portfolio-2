@@ -16,6 +16,9 @@ export default {
       animation: {
         "gradient-slow": "gradient 8s ease infinite",
         popUp: "popUp 0.8s ease-in-out forwards",
+        popUpLate: "popUp 1.2s ease-in-out forwards",
+        popUpLater: "popUp 1.4s ease-in-out forwards",
+        popUpLater2: "popUp 1.6s ease-in-out forwards",
       },
     },
   },

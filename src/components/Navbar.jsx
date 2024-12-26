@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import NavButton from "./common/NavButton";
-const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
+const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -45,6 +45,9 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
         <nav className="hidden lg:block">
           <NavButton onClick={() => scrollToSection(homeRef)}>Home</NavButton>
           <NavButton onClick={() => scrollToSection(aboutRef)}>About</NavButton>
+          <NavButton onClick={() => scrollToSection(skillRef)}>
+            Skills
+          </NavButton>
           <NavButton onClick={() => scrollToSection(projectsRef)}>
             Projects
           </NavButton>
@@ -53,7 +56,7 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
           </NavButton>
         </nav>
         <a
-          href="https://drive.google.com/file/d/13RxX996gLr1-JrFrN0xNg0Oqz5rMdYZK/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Z14K6leu4Y31i4_FXWi5q0unbf6QPNGx/view?usp=sharing"
           target="_blank"
         >
           <button className=" bg-white text-blue-400 px-2 py-1 lg:px-4 lg:py-2 hover:bg-blue-400 hover:text-white hover:scale-110 duration-300">
