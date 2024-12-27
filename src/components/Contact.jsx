@@ -26,7 +26,7 @@ const Contact = forwardRef((props, ref) => {
             <input
               className={`transition-transform transform duration-500 ${
                 inView ? "animate-popUp" : "opacity-0"
-              } w-full h-10 p-2 text-black`}
+              } w-full h-10 p-2 text-black rounded-md shadow-xl`}
               placeholder="Enter your name"
               type="text"
               name="name"
@@ -34,7 +34,7 @@ const Contact = forwardRef((props, ref) => {
             <input
               className={`transition-transform transform duration-500 ${
                 inView ? "animate-popUpLate" : "opacity-0"
-              } w-full h-10 p-2 text-black`}
+              } w-full h-10 p-2 text-black rounded-md shadow-xl`}
               placeholder="Enter your email"
               type="email"
               name="email"
@@ -43,13 +43,13 @@ const Contact = forwardRef((props, ref) => {
             <textarea
               className={`transition-transform transform duration-500 ${
                 inView ? "animate-popUpLater" : "opacity-0"
-              } w-full h-32 p-2 text-black`}
+              } w-full h-32 p-2 text-black rounded-md shadow-xl`}
               placeholder="Enter your message"
               name="message"
             ></textarea>
 
             <button
-              className="bg-black text-blue-400 hover:text-white duration-150 px-5 py-3"
+              className="bg-black text-blue-400 hover:text-white hover:scale-105 duration-150 px-5 py-3 rounded-md"
               type="submit"
             >
               Send

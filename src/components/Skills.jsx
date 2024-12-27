@@ -33,7 +33,7 @@ const Skills = forwardRef((props, ref) => {
               className={`transition-transform transform duration-500 ${
                 inView ? "animate-popUp" : "opacity-0"
               }`}
-              targetProgress={90}
+              targetProgress={inView ? 90 : 0}
             />
           </div>
           <div className="w-full flex flex-col gap-2">
@@ -46,7 +46,7 @@ const Skills = forwardRef((props, ref) => {
                 className={`transition-transform transform duration-500 ${
                   inView ? "animate-popUp" : "opacity-0"
                 }`}
-                targetProgress={90}
+                targetProgress={inView ? 90 : 0}
               />
             }
           </div>
@@ -60,7 +60,7 @@ const Skills = forwardRef((props, ref) => {
                 className={`transition-transform transform duration-500 ${
                   inView ? "animate-popUp" : "opacity-0"
                 }`}
-                targetProgress={80}
+                targetProgress={inView ? 80 : 0}
               />
             }
           </div>
@@ -74,7 +74,7 @@ const Skills = forwardRef((props, ref) => {
                 className={`transition-transform transform duration-500 ${
                   inView ? "animate-popUp" : "opacity-0"
                 }`}
-                targetProgress={85}
+                targetProgress={inView ? 85 : 0}
               />
             }
           </div>
@@ -88,7 +88,21 @@ const Skills = forwardRef((props, ref) => {
                 className={`transition-transform transform duration-500 ${
                   inView ? "animate-popUp" : "opacity-0"
                 }`}
-                targetProgress={80}
+                targetProgress={inView ? 80 : 0}
+              />
+            }
+          </div>
+          <div className="w-full flex flex-col gap-2">
+            <div className="w-full flex justify-between">
+              <h1>Git and GitHub</h1>
+              <h1>80%</h1>
+            </div>
+            {
+              <ProgressBar
+                className={`transition-transform transform duration-500 ${
+                  inView ? "animate-popUp" : "opacity-0"
+                }`}
+                targetProgress={inView ? 80 : 0}
               />
             }
           </div>

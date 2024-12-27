@@ -18,10 +18,10 @@ const About = forwardRef((props, ref) => {
           <p className="text-gray-400">INTRODUCTION</p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between w-5/6 md:w-4/6 gap-7 lg:gap-20 xl:gap-32">
-          <div className="w-full xl:w-2/5 h-full flex items-center justify-center border border-white">
+          <div className="w-full xl:w-2/5 h-full flex items-center justify-center border border-white rounded-xl">
             <img
               src={aboutPic}
-              className=" border border-spacing-5 w-full scale-90 hover:scale-100 duration-200"
+              className=" border-spacing-5 w-full scale-90 hover:scale-100 duration-200 rounded-xl shadow-2xl"
             />
           </div>
           <div className="w-full xl:w-3/4 lg:text-xl flex items-center">

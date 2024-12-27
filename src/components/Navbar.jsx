@@ -39,7 +39,7 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
     >
       <div className="flex items-center justify-between w-3/4 mx-auto">
         <div className="flex gap-1 text-2xl font-semibold">
-          <div>My</div>
+          <div>NB's</div>
           <div className="text-blue-400">Portfolio</div>
         </div>
         <nav className="hidden lg:block">
@@ -59,7 +59,7 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
           href="https://drive.google.com/file/d/1Z14K6leu4Y31i4_FXWi5q0unbf6QPNGx/view?usp=sharing"
           target="_blank"
         >
-          <button className=" bg-white text-blue-400 px-2 py-1 lg:px-4 lg:py-2 hover:bg-blue-400 hover:text-white hover:scale-110 duration-300">
+          <button className=" bg-white text-blue-400 px-2 py-1 lg:px-4 lg:py-2 hover:bg-blue-400 hover:text-white hover:scale-110 duration-300 rounded-md">
             My CV
           </button>
         </a>
