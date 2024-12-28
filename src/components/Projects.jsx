@@ -55,7 +55,9 @@ const Projects = forwardRef((props, ref) => {
           } flex flex-wrap gap-8 w-[90%] justify-center items-center`}
         >
           {projects.length > 0 &&
-            projects.map((project) => <ProjectCard project={project} />)}
+            projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
         </div>
       </div>
     </div>
