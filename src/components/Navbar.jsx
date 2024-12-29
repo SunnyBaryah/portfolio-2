@@ -124,7 +124,9 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
         >
           <span
             className={`h-1 w-full bg-black rounded transition-transform duration-300 ${
-              isOpen ? "rotate-[50deg] translate-y-2.5" : ""
+              isOpen
+                ? "rotate-[50deg] translate-y-2.5 md:rotate-[40deg] md:translate-y-3.5"
+                : ""
             }`}
           ></span>
           <span
@@ -134,7 +136,9 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
           ></span>
           <span
             className={`h-1 w-full bg-black rounded transition-transform duration-300 ${
-              isOpen ? "-rotate-[55deg] -translate-y-2.5" : ""
+              isOpen
+                ? "-rotate-[55deg] -translate-y-2.5 md:-rotate-[40deg] md:-translate-y-3.5"
+                : ""
             }`}
           ></span>
         </button>
