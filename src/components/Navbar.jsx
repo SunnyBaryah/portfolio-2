@@ -66,7 +66,7 @@ const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
             </NavButton>
           </nav>
           <a
-            href="https://drive.google.com/file/d/1Z14K6leu4Y31i4_FXWi5q0unbf6QPNGx/view?usp=sharing"
+            href="https://drive.google.com/file/d/1R-JVSHL4XUs3Ctn5YklWY_3iJnYuaYHG/view?usp=sharing"
             target="_blank"
           >
             <button className=" bg-white text-blue-400 px-2 py-1 lg:px-4 lg:py-2 hover:bg-blue-400 hover:text-white hover:scale-110 duration-300 rounded-md">
