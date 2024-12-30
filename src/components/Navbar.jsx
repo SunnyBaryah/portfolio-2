@@ -4,7 +4,7 @@ import NavButton from "./common/NavButton";
 import { motion, AnimatePresence } from "motion/react";
 const Navbar = ({ homeRef, aboutRef, projectsRef, contactRef, skillRef }) => {
   const scrollToSection = (sectionRef) => {
-    setIsOpen(!isOpen);
+    if (isOpen === true) setIsOpen(false);
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
   const [showNavbar, setShowNavbar] = useState(true);
